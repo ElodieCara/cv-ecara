@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "montserrat", sans-serif;
+  max-width: 842px;
+  width: 100%;
+  margin: Auto;
+  /* background-color: grey; */
+  box-shadow: 25px 0 20px -20px rgba(0, 0, 0, 0.45); /* background-color: grey; */
+  width: 210mm;
+  height: 297mm;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #ffe7d4;
+}
+
+h1 {
+  font-size: 23px;
+}
+
+h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+h3,
+p,
+li {
+  font-size: 8px;
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 8px 15px;
+}
+
+h4 {
+  margin: 0;
+}
+
+.home-cv {
+  display: flex;
+  flex-direction: row;
+  width: 21cm;
+  min-height: 29.7cm;
+  margin: 1cm auto;
+  border: 1px #d3d3d3 solid;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/*Partie I */
+
+.rang1 {
+  display: flex;
+  flex-direction: column;
+  background-color: #494e5f;
+  color: #ffe7d4;
+  padding-top: 40px;
+}
+
+.rang1__presentation,
+.rang1__profil {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15%;
+  max-width: 350px;
+}
+
+.rang1__presentation__photo {
+  display: flex;
+  justify-content: space-around;
+}
+
+img {
+  border-radius: 50%;
+  width: 10rem;
+  padding: 15px;
+}
+
+.rang1__presentation__title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.rang1__presentation__poste {
+  border-bottom: 5px solid #ffe7d4;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.rang1__profil-personnel p,
+.rang1__profil-compétences p,
+.rang1__profil-contact p,
+.rang1__profil-savoirfaire p {
+  color: white;
+  font-size: 12px;
+}
+
+.rang1__profil-liens {
+  list-style: none;
+  padding: 0;
+}
+
+.rang1__profil-liens i {
+  padding-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* Partie II */
+
+.rang2__formation,
+.rang2__experiences {
+  padding: 25px;
+  max-width: 400px;
+  background-color: white;
+}
+
+.formation p,
+li {
+  font-size: 10px;
+}
+
+.formation__title,
+.experience__title,
+.interest__title {
+  background-color: #ffe7d4;
+  padding: 10px;
+  letter-spacing: 2px;
+}
