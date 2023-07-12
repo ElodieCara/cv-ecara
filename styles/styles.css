@@ -122,6 +122,9 @@ img {
 
 .rang2__formation,
 .rang2__experiences {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 25px;
   max-width: 400px;
   background-color: white;
