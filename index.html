@@ -12,25 +12,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Inspiration&family=Josefin+Sans:wght@100;200;300;400;500&family=Lora:wght@400;500;600&family=Montserrat:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="home-cv">
-        <section class="rang1">
-            <div class="rang1__presentation">
-                <div class="rang1__presentation__photo">
-                    <img src="image/photoEC.jpg" alt="photo_Elodie_Cara_CV">
+        <section class="header">
+            <div class="presentation">
+                <div class="presentation__photo">
+                    <img src="image/photoEC.png" alt="photo_Elodie_Cara_CV">
                 </div>
-                <h1 class="rang1__presentation__title">CARADEUC Elodie</h1>
-                <h2 class="rang1__presentation__poste">Testeuse informatique</h2>
+                <div class="presentation__text">
+                    <h1 class="presentation__title">CARADEUC Elodie</h1>
+                    <div class="presentation__icon">
+                        <object data="stars.svg" type="image/svg+xml"></object>
+                    </div>
+                    <h2 class="presentation__poste">Développeur Intégrateur Web</h2>
+                </div>
+
             </div>
-            <div class="rang1__profil">
-                <div class="rang1__profil-personnel">
-                    <h2>Profil Personnel</h2>
-                    <p> Fortement passionnée par l'informatique et après avoir réussi avec succès ma formation de Développeuse Intégrateur Web chez OpenClassrooms, je suis désormais enthousiaste à l'idée de mettre mes compétences et ma précision au service d'une équipe en tant que testeuse en informatique. Mon expertise technique et mon souci du détail me permettront de contribuer efficacement à garantir la qualité et la fiabilité des produits logiciels que je teste.</p>
-                </div>
+        </section>
+        <section class="main">
+            <article class="left-column">
                 <div class="rang1__profil-compétences">
                     <h2>Compétences en informatique</h2>
+                    <hr>
                     <h3>Langages de programmation</h3>
                     <p>Html5, Css3, JavaScript, React, Sass </p>
                     <h3>Logiciels et outils</h3>
@@ -43,6 +51,7 @@
                 </div>
                 <div class="rang1__profil-contact">
                     <h2>Contactez-moi</h2>
+                    <hr>
                     <ul class="rang1__profil-liens">
                         <li><i class="fa-solid fa-square-envelope"></i><a
                                 href="mailto:caradeuc.elodie@email.com">caradeuc.elodie@gmail.com</a>
@@ -67,67 +76,75 @@
                         <br>
                     </p>
                 </div>
+                <div class="presentation__profil">
+                    <h2>Profil Personnel</h2>
+                    <hr>
+                    <p> Fortement passionnée par l'informatique et après avoir réussi avec succès ma formation de
+                        Développeuse Intégrateur Web chez OpenClassrooms, je suis désormais enthousiaste à l'idée de
+                        mettre mes compétences et ma précision au service d'une équipe en tant que testeuse en
+                        informatique. Mon expertise technique et mon souci du détail me permettront de contribuer
+                        efficacement à garantir la qualité et la fiabilité des produits logiciels que je teste.</p>
+                </div>
+            </article>
+            <article class="right-column">
+                <section class="formation">
+                    <h2 class="formation__title">Formation</h2>
+                    <h4>2023 - OpenClassrooms - Développeur Intégrateur Web</h4>
+                    <p>Certification professionnelle « Développeur intégrateur web »
+                        enregistrée au Répertoire National des Certifications Professionnelles,
+                        de niveau 5 (bac +2) sur les cadres français et européens des certifications
+                        (European Qualifications Framework)</p>
+                    <ul>
+                        <li>découper, assembler et intégrer tous les éléments d’une maquette graphique en HTML5 et CSS ;
+                        </li>
+                        <li>ajouter du contenu audio et vidéo en HTML5 ;</li>
+                        <li>animer les pages web avec CSS3 ;</li>
+                        <li>appliquer les standards du web et les normes en vigueur ;</li>
+                        <li>construire un site web fluide s’adaptant à tout type d’écran (web, smartphone et tablette) ;
+                        </li>
+                        <li>améliorer le référencement naturel en utilisant les balises selon leur sémantique ;</li>
+                        <li>faire réagir la page web en fonction des actions de l’utilisateur en JavaScript ;</li>
+                        <li>se connecter à un service web pour exploiter des données tierces (API) ;</li>
+                        <li>gérer les comptes utilisateurs ;</li>
+                        <li>concevoir un site maintenable grâce à la gestion des erreurs et exceptions ;</li>
+                        <li>créer, gérer et afficher le contenu d’une base de données.</li>
+                    </ul>
+                    <h4>2022 - IED Paris 8 - Licence de Psychologie</h4>
+                    <p> L1 et L2 de psychologie</p>
+                    <h4>2006 - 1ere année BTS Assistante de Gestion PME-PMI </h4>
+                    <p>En alternance</p>
+                    <h4>2004 - Baccalauréat professionnel de Secrétariat</h4>
+                    <p>Mention Assez-Bien</p>
+                </section>
+                <section class="experiences">
+                    <h2 class="experience__title">Expériences et projets Professionnels</h2>
+                    <p>2023 - Projet personnel - Site vitrine pour une Illustratrice </p>
+                    <p> 2022 - Projets OpenClassrooms</p>
+                    <ul class="experiences__projets">
+                        <li>Transformer une maquette en site web avec HTML et CSS</li>
+                        <li>Dynamiser une page web avec des animations CSS</li>
+                        <li>Optimiser un site web existant</li>
+                        <li>Construire un site e-commerce en JavaScript</li>
+                        <li>Construire une API sécurisée pour un application d'avis gastronomiques</li>
+                        <li>Créer une application web de location immobilière avec React</li>
+                    </ul>
+                    <p>2006-2022 - Chef de Famille - Organiser la vie de famille - Gérer un budget & conflits</p>
+                    <p>2004/2005 - SFR - La Défense - Secrétaire de direction en alternance</p>
+                </section>
+                <section class="interest">
+                    <h2 class="interest__title">Un peu plus sur moi</h2>
+                    <ul>
+                        <li>Lecture
+                        </li>
+                        <li>Ecriture
+                        </li>
+                        <li>Jeux Vidéo
+                        </li>
+                    </ul>
+                </section>
+            </article>
         </section>
-
-        <article class="rang2__formation">
-            <section class="formation">
-                <h2 class="formation__title">Formation</h2>
-                <h4>2023 - OpenClassrooms - Développeur Intégrateur Web</h4>
-                <p>Certification professionnelle « Développeur intégrateur web »
-                    enregistrée au Répertoire National des Certifications Professionnelles,
-                    de niveau 5 (bac +2) sur les cadres français et européens des certifications
-                    (European Qualifications Framework)</p>
-                <ul>
-                    <li>découper, assembler et intégrer tous les éléments d’une maquette graphique en HTML5 et CSS ;
-                    </li>
-                    <li>ajouter du contenu audio et vidéo en HTML5 ;</li>
-                    <li>animer les pages web avec CSS3 ;</li>
-                    <li>appliquer les standards du web et les normes en vigueur ;</li>
-                    <li>construire un site web fluide s’adaptant à tout type d’écran (web, smartphone et tablette) ;
-                    </li>
-                    <li>améliorer le référencement naturel en utilisant les balises selon leur sémantique ;</li>
-                    <li>faire réagir la page web en fonction des actions de l’utilisateur en JavaScript ;</li>
-                    <li>se connecter à un service web pour exploiter des données tierces (API) ;</li>
-                    <li>gérer les comptes utilisateurs ;</li>
-                    <li>concevoir un site maintenable grâce à la gestion des erreurs et exceptions ;</li>
-                    <li>créer, gérer et afficher le contenu d’une base de données.</li>
-                </ul>
-                <h4>2022 - IED Paris 8 - Licence de Psychologie</h4>
-                <p> L1 et L2 de psychologie</p>
-                <h4>2006 - 1ere année BTS Assistante de Gestion PME-PMI </h4>
-                <p>En alternance</p>
-                <h4>2004 - Baccalauréat professionnel de Secrétariat</h4>
-                <p>Mention Assez-Bien</p>
-            </section>
-            <section class="experiences">
-                <h2 class="experience__title">Expériences et projets Professionnels</h2>
-                <p>2023 - Projet personnel - Site vitrine pour une Illustratrice </p>
-                <p> 2022 - Projets OpenClassrooms</p>
-                <ul class="experiences__projets">
-                    <li>Transformer une maquette en site web avec HTML et CSS</li>
-                    <li>Dynamiser une page web avec des animations CSS</li>
-                    <li>Optimiser un site web existant</li>
-                    <li>Construire un site e-commerce en JavaScript</li>
-                    <li>Construire une API sécurisée pour un application d'avis gastronomiques</li>
-                    <li>Créer une application web de location immobilière avec React</li>
-                </ul>
-                <p>2006-2022 - Chef de Famille - Organiser la vie de famille - Gérer un budget & conflits</p>
-                <p>2004/2005 - SFR - La Défense - Secrétaire de direction en alternance</p>
-            </section>
-            <section class="interest">
-                <h2 class="interest__title">Un peu plus sur moi</h2>
-                <ul>
-                    <li>Lecture
-                    </li>
-                    <li>Ecriture
-                    </li>
-                    <li>Jeux Vidéo
-                    </li>
-                </ul>
-            </section>
-        </article>
     </div>
-
 </body>
 
 </html>

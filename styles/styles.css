@@ -5,10 +5,11 @@
 }
 
 body {
-  font-family: "montserrat", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   max-width: 842px;
   width: 100%;
   margin: Auto;
+  background: #1a1614;
   /* background-color: grey; */
   box-shadow: 25px 0 20px -20px rgba(0, 0, 0, 0.45); /* background-color: grey; */
   width: 210mm;
@@ -18,51 +19,192 @@ body {
 a {
   text-decoration: none;
   outline: none;
-  color: #ffe7d4;
+  color: #c6a98b;
 }
 
 h1 {
   font-size: 23px;
+  color: #c6a98b;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 h2 {
   font-size: 12px;
   text-transform: uppercase;
+  color: #c6a98b;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 h3,
 p,
 li {
   font-size: 8px;
+  color: #c6a98b;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 ul {
   margin: 0;
   padding: 0 0 8px 15px;
+  color: #c6a98b;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 h4 {
   margin: 0;
+  color: #c6a98b;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  margin: 5px 0;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#1a1614),
+    color-stop(50%, #c6a98b),
+    to(#efe0cb)
+  );
+  background: linear-gradient(90deg, #1a1614 0%, #c6a98b 50%, #efe0cb 100%);
 }
 
 .home-cv {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr;
   width: 21cm;
   min-height: 29.7cm;
+  padding: 5rem;
   /* margin: 1cm auto; */
   border: 1px #d3d3d3 solid;
   border-radius: 5px;
-  background: white;
+  /* background: linear-gradient(90deg, #1a1614 0%, #c6a98b 50%, #efe0cb 100%); */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(150deg, #229e94 10%, #615242 25%, #1a1614 100%);
+
+  z-index: -1000;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  height: 1204px;
+}
+
+/* .home-cv::before {
+} */
+
+/* .home-cv::after {
+  background: #1a1614;
+} */
+/* ===Header=== */
+
+.header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.presentation {
+  display: flex;
+  gap: 7rem;
+}
+
+.presentation__photo {
+  /* display: flex; */
+  justify-content: space-around;
+  z-index: 10;
+}
+
+.presentation__photo:after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 215px;
+  border: 1px solid #c6a98b;
+  opacity: 0.4;
+  transform: rotate(-8deg);
+  left: 140px;
+  /* background: url(/portfolio_ecara/assets/Logo-34a9c95e.png) center/cover
+    no-repeat; */
+  z-index: -10;
+  backface-visibility: hidden;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+img {
+  width: 10rem;
+  border: 1px solid #c6a98b;
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(2px 4px 6px black);
+  background-color: rgba(30, 26, 23, 0.59);
+}
+
+/* Icon */
+
+.presentation__icon {
+  will-change: transform;
+  transform: translateX(0.1px) translateY(5px);
+}
+
+.icon__stars {
+  width: 40px;
+}
+
+.icon__stars__path {
+  stroke-dasharray: 1560;
+  stroke-dashoffset: 0;
+  animation: animate-stars 2s linear forwards;
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.7));
+}
+
+. @keyframes animate-stars {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1560;
+  }
+  80% {
+    stroke-dashoffset: 3120;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 3120;
+    fill: #31e8ff;
+  }
+}
+
+.presentation__icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+  opacity: 0; /* Assurez-vous que l'opacité est à 0 pour le départ de l'animation */
+  z-index: -1; /* Assurez-vous que le pseudo-élément est derrière le chemin */
+}
+
+/* ===Main=== */
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+}
+
+.rang1__presentation__title {
+  display: flex;
+  flex-direction: column;
 }
 
 /*Partie I */
 
 .rang1 {
-  display: flex;
-  flex-direction: column;
-  background-color: #494e5f;
+  background-color: #1a1614;
   color: #ffe7d4;
   padding-top: 40px;
 }
@@ -75,24 +217,13 @@ h4 {
   max-width: 350px;
 }
 
-.rang1__presentation__photo {
-  display: flex;
-  justify-content: space-around;
-}
-
-img {
-  border-radius: 50%;
-  width: 10rem;
-  padding: 15px;
-}
-
 .rang1__presentation__title {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .rang1__presentation__poste {
-  border-bottom: 5px solid #ffe7d4;
+  /* border-bottom: 5px solid #ffe7d4; */
   padding-bottom: 20px;
   text-transform: uppercase;
   font-weight: 400;
@@ -122,12 +253,13 @@ img {
 
 .rang2__formation,
 .rang2__experiences {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding: 25px;
   max-width: 400px;
-  background-color: white;
+  background-color: #1a1614;
+}
+
+.rang2__formation__content {
+  border: 1px solid #c6a98b;
 }
 
 .formation p,
