@@ -9,7 +9,10 @@ body {
   max-width: 842px;
   width: 100%;
   margin: Auto;
-  background: #1a1614;
+  /* background-color: #1e1a1796; */
+  background-color: #1d1816;
+  position: relative;
+  z-index: 100;
   /* background-color: grey; */
   box-shadow: 25px 0 20px -20px rgba(0, 0, 0, 0.45); /* background-color: grey; */
   width: 210mm;
@@ -81,7 +84,7 @@ hr {
   border-radius: 5px;
   /* background: linear-gradient(90deg, #1a1614 0%, #c6a98b 50%, #efe0cb 100%); */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(150deg, #229e94 10%, #615242 25%, #1a1614 100%);
+  background-image: linear-gradient(to top, #1a1614, rgba(255, 255, 255, 0));
 
   z-index: -1000;
   overflow: hidden;
@@ -90,12 +93,6 @@ hr {
   height: 1204px;
 }
 
-/* .home-cv::before {
-} */
-
-/* .home-cv::after {
-  background: #1a1614;
-} */
 /* ===Header=== */
 
 .header {
@@ -118,12 +115,12 @@ hr {
 .presentation__photo:after {
   content: "";
   position: absolute;
-  width: 160px;
-  height: 215px;
+  width: 165px;
+  height: 165px;
   border: 1px solid #c6a98b;
   opacity: 0.4;
   transform: rotate(-8deg);
-  left: 140px;
+  left: 80px;
   /* background: url(/portfolio_ecara/assets/Logo-34a9c95e.png) center/cover
     no-repeat; */
   z-index: -10;
@@ -131,7 +128,7 @@ hr {
   filter: drop-shadow(2px 4px 6px black);
 }
 
-img {
+.presentation__photo img {
   width: 10rem;
   border: 1px solid #c6a98b;
   position: relative;
@@ -141,136 +138,54 @@ img {
 }
 
 /* Icon */
-
-.presentation__icon {
-  will-change: transform;
-  transform: translateX(0.1px) translateY(5px);
+.icon {
+  width: 50px;
+}
+.icon img {
+  width: 100%;
+  position: relative;
+  display: inline-block;
 }
 
-.icon__stars {
-  width: 40px;
-}
-
-.icon__stars__path {
+path {
+  /* fill: transparent; */
+  stroke: 10;
+  color: white;
+  background-image: linear-gradient(
+    135deg,
+    #a770ef 0%,
+    #cf8bf3 50%,
+    #fdb99b 100%
+  );
   stroke-dasharray: 1560;
   stroke-dashoffset: 0;
   animation: animate-stars 2s linear forwards;
   filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.7));
 }
 
-. @keyframes animate-stars {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  40% {
-    stroke-dashoffset: 1560;
-  }
-  80% {
-    stroke-dashoffset: 3120;
-    fill: transparent;
-  }
-  100% {
-    stroke-dashoffset: 3120;
-    fill: #31e8ff;
-  }
+/* Gradient-svg */
+
+#gradient-horizontal {
+  $color-stop-1: #a770ef;
+  $color-stop-2: #cf8bf3;
+  $color-stop-3: #fdb99b;
 }
 
-.presentation__icon::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
-  opacity: 0; /* Assurez-vous que l'opacité est à 0 pour le départ de l'animation */
-  z-index: -1; /* Assurez-vous que le pseudo-élément est derrière le chemin */
+#gradient-vertical {
+  $color-stop-1: #00c3ff;
+  $color-stop-2: #77e190;
+  $color-stop-3: #ffff1c;
 }
 
 /* ===Main=== */
 
-.main {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 20px;
-}
-
-.rang1__presentation__title {
+.container-1 {
   display: flex;
-  flex-direction: column;
+  gap: 10rem;
+  border: 2px solid black;
 }
 
-/*Partie I */
-
-.rang1 {
-  background-color: #1a1614;
-  color: #ffe7d4;
-  padding-top: 40px;
-}
-
-.rang1__presentation,
-.rang1__profil {
+.container-2 {
   display: flex;
-  flex-direction: column;
-  padding: 0 15%;
-  max-width: 350px;
-}
-
-.rang1__presentation__title {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.rang1__presentation__poste {
-  /* border-bottom: 5px solid #ffe7d4; */
-  padding-bottom: 20px;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: white;
-  letter-spacing: 2px;
-}
-
-.rang1__profil-personnel p,
-.rang1__profil-compétences p,
-.rang1__profil-contact p,
-.rang1__profil-savoirfaire p {
-  color: white;
-  font-size: 12px;
-}
-
-.rang1__profil-liens {
-  list-style: none;
-  padding: 0;
-}
-
-.rang1__profil-liens i {
-  padding-right: 5px;
-  margin-bottom: 5px;
-}
-
-/* Partie II */
-
-.rang2__formation,
-.rang2__experiences {
-  padding: 25px;
-  max-width: 400px;
-  background-color: #1a1614;
-}
-
-.rang2__formation__content {
-  border: 1px solid #c6a98b;
-}
-
-.formation p,
-li {
-  font-size: 10px;
-}
-
-.formation__title,
-.experience__title,
-.interest__title {
-  background-color: #ffe7d4;
-  padding: 10px;
-  letter-spacing: 2px;
+  border: 2px solid black;
 }
