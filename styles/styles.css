@@ -34,20 +34,25 @@ h3,
 p,
 li {
   font-size: 8px;
+  text-decoration: none;
 }
 
 ul {
   margin: 0;
   padding: 0 0 8px 15px;
+  text-decoration: none;
 }
 
 h4 {
   margin: 0;
 }
 
-.home-cv {
+section {
   display: flex;
-  flex-direction: row;
+  gap: 85px;
+}
+
+.home-cv {
   width: 21cm;
   min-height: 29.7cm;
   margin: 1cm auto;
@@ -57,88 +62,46 @@ h4 {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/*Partie I */
-
-.rang1 {
-  display: flex;
-  flex-direction: column;
-  background-color: #494e5f;
-  color: #ffe7d4;
-  padding-top: 40px;
+header {
+  font-family: "EB Garamond";
+  text-align: center;
 }
 
-.rang1__presentation,
-.rang1__profil {
-  display: flex;
-  flex-direction: column;
-  padding: 0 15%;
-  max-width: 350px;
+.header-title {
+  font-size: 52px;
 }
 
-.rang1__presentation__photo {
-  display: flex;
-  justify-content: space-around;
+.header-poste {
+  font-size: 18px;
 }
 
-img {
-  border-radius: 50%;
-  width: 10rem;
-  padding: 15px;
+/* ==== Main ==== */
+
+main {
+  padding: 0 40px;
 }
 
-.rang1__presentation__title {
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.contact {
+  margin-bottom: 18px;
 }
 
-.rang1__presentation__poste {
-  border-bottom: 5px solid #ffe7d4;
-  padding-bottom: 20px;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: white;
-  letter-spacing: 2px;
-}
-
-.rang1__profil-personnel p,
-.rang1__profil-compétences p,
-.rang1__profil-contact p,
-.rang1__profil-savoirfaire p {
-  color: white;
-  font-size: 12px;
-}
-
-.rang1__profil-liens {
+.contact ul {
   list-style: none;
   padding: 0;
 }
 
-.rang1__profil-liens i {
-  padding-right: 5px;
-  margin-bottom: 5px;
+.contact::before {
+  width: 1px;
+  height: 10%;
+  background: #c6a98b;
+  content: "";
+  left: 225px;
+  top: 240px;
+  position: absolute;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-/* Partie II */
-
-.rang2__formation,
-.rang2__experiences {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 25px;
-  max-width: 400px;
-  background-color: white;
-}
-
-.formation p,
-li {
-  font-size: 10px;
-}
-
-.formation__title,
-.experience__title,
-.interest__title {
-  background-color: #ffe7d4;
-  padding: 10px;
-  letter-spacing: 2px;
+.skills img {
+  width: 30px;
 }
