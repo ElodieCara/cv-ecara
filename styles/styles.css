@@ -23,11 +23,24 @@ a {
 
 h1 {
   font-size: 23px;
+  background-image: linear-gradient(
+    90deg,
+    #1a1614 0%,
+    #c6a98b 50%,
+    #efe0cb 100%
+  );
+  background-clip: text; /* Indique que le dégradé doit être appliqué au texte */
+  -webkit-background-clip: text; /* Pour une compatibilité avec les anciennes versions de Safari */
+  color: transparent;
 }
 
 h2 {
   font-size: 12px;
   text-transform: uppercase;
+  color: grey;
+  font-weight: 400; /* Réglez la valeur de la font-weight pour rendre le texte plus fin */
+  letter-spacing: 2px; /* Réglez la valeur de letter-spacing pour ajuster l'espacement entre les lettres */
+  word-spacing: 4px;
 }
 
 h3,
@@ -45,6 +58,13 @@ ul {
 
 h4 {
   margin: 0;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  margin: 5px 0;
+  background-color: #d7d6be;
 }
 
 section {
@@ -90,18 +110,37 @@ main {
   padding: 0;
 }
 
-.contact::before {
-  width: 1px;
-  height: 10%;
-  background: #c6a98b;
-  content: "";
-  left: 225px;
-  top: 240px;
-  position: absolute;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
 .skills img {
   width: 30px;
+}
+
+.summary {
+}
+
+/* ==== education ==== */
+
+ol {
+  border-left: 1px solid #e9e7e1;
+  position: relative;
+  /* z-index: -100px; */
+}
+
+.education-list li {
+  list-style-type: none;
+  position: relative;
+}
+
+/* .education-diplome:before {
+  content: "O";
+  color: #e9e7e1;
+  position: absolute;
+  background-color: white;
+  right: 467px;
+  z-index: 100px;
+} */
+
+.education-description li::before {
+  content: "\25AA"; /* Code Unicode pour le symbole carré (◪) */
+  margin-right: 8px; /* Ajouter un espace entre le symbole et le texte */
+  color: #d7d6be;
 }
