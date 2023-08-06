@@ -18,11 +18,13 @@ body {
 a {
   text-decoration: none;
   outline: none;
-  color: #ffe7d4;
+  color: grey;
 }
 
 h1 {
   font-size: 23px;
+  space-align: 1px;
+  margin-bottom: 10px;
   background-image: linear-gradient(
     90deg,
     #1a1614 0%,
@@ -37,17 +39,23 @@ h1 {
 h2 {
   font-size: 12px;
   text-transform: uppercase;
+  margin: 10px 0 40px 0;
   color: grey;
   font-weight: 400; /* Réglez la valeur de la font-weight pour rendre le texte plus fin */
   letter-spacing: 2px; /* Réglez la valeur de letter-spacing pour ajuster l'espacement entre les lettres */
   word-spacing: 4px;
 }
 
-h3,
-p,
-li {
-  font-size: 8px;
+h3 {
+  font-size: 14px;
   text-decoration: none;
+}
+
+li,
+p,
+a {
+  font-size: 12px !important;
+  font-family: "Times New Roman", Times, serif;
 }
 
 ul {
@@ -65,6 +73,11 @@ hr {
   height: 1px;
   margin: 5px 0;
   background-color: #d7d6be;
+}
+
+i {
+  margin: 5px;
+  color: #a59c84;
 }
 
 section {
@@ -95,6 +108,15 @@ header {
   font-size: 18px;
 }
 
+.header-link {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.header-link i {
+  margin: 5px;
+}
 /* ==== Main ==== */
 
 main {
@@ -103,6 +125,7 @@ main {
 
 .contact {
   margin-bottom: 18px;
+  width: 35%;
 }
 
 .contact ul {
@@ -114,7 +137,10 @@ main {
   width: 30px;
 }
 
-.summary {
+.summary p {
+  border-left: 1px solid #e9e7e1;
+  position: relative;
+  padding-left: 40px;
 }
 
 /* ==== education ==== */
@@ -143,4 +169,30 @@ ol {
   content: "\25AA"; /* Code Unicode pour le symbole carré (◪) */
   margin-right: 8px; /* Ajouter un espace entre le symbole et le texte */
   color: #d7d6be;
+}
+
+/* ==== experiences ==== */
+
+.experiences__projets {
+  list-style-type: none;
+}
+
+.experiences__projets li::before {
+  content: "\25AA"; /* Code Unicode pour le symbole carré (◪) */
+  margin-right: 8px; /* Ajouter un espace entre le symbole et le texte */
+  color: #d7d6be;
+}
+
+/* ==== MORE ==== */
+
+.more {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Deux colonnes de largeur égale */
+  gap: 20px; /* Espacement entre les colonnes */
+}
+
+/* ==== hobbies ==== */
+
+.hobbies ul {
+  list-style-type: none;
 }
