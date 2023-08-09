@@ -6,11 +6,10 @@
 
 body {
   font-family: "montserrat", sans-serif;
-  max-width: 842px;
-  width: 100%;
   margin: Auto;
-  /* background-color: grey; */
-  box-shadow: 25px 0 20px -20px rgba(0, 0, 0, 0.45); /* background-color: grey; */
+  width: 100%;
+  max-width: 842px;
+  background-color: grey;
   width: 210mm;
   height: 297mm;
 }
@@ -19,6 +18,10 @@ a {
   text-decoration: none;
   outline: none;
   color: grey;
+}
+
+span {
+  font-size: 14px;
 }
 
 h1 {
@@ -37,9 +40,9 @@ h1 {
 }
 
 h2 {
-  font-size: 12px;
+  font-size: 18px;
   text-transform: uppercase;
-  margin: 10px 0 40px 0;
+  margin: 10px 0 20px 0;
   color: grey;
   font-weight: 400; /* Réglez la valeur de la font-weight pour rendre le texte plus fin */
   letter-spacing: 2px; /* Réglez la valeur de letter-spacing pour ajuster l'espacement entre les lettres */
@@ -47,13 +50,14 @@ h2 {
 }
 
 h3 {
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
   font-weight: bold;
   color: grey;
 }
 
 h4 {
+  font-size: 14px;
   margin: 0;
   font-weight: bold;
   color: grey;
@@ -62,13 +66,13 @@ h4 {
 li,
 p,
 a {
-  font-size: 12px !important;
+  font-size: 14px !important;
   font-family: "Times New Roman", Times, serif;
   color: grey;
 }
 
 ul {
-  text-align: justify;
+  /* text-align: justify; */
   margin: 0;
   padding: 0 0 8px 15px;
   text-decoration: none;
@@ -86,20 +90,39 @@ i {
   color: #a59c84;
 }
 
+img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  filter: sepia(5px);
+}
+
 section {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 10px;
+  margin: 10px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+aside {
+  display: grid;
+  grid-template-rows: auto 1fr; /* Une rangée en haut, le reste en bas */
+  grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+  gap: 10px; /* Espacement entre les éléments */
+  height: 300px;
 }
 
 .home-cv {
   width: 21cm;
   min-height: 29.7cm;
-  margin: 1cm auto;
   border: 1px #d3d3d3 solid;
   border-radius: 5px;
   background: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 25px 0 20px -20px rgba(0, 0, 0, 0.45);
 }
 
 header {
@@ -113,6 +136,7 @@ header {
 
 .header-poste {
   font-size: 18px;
+  margin: 15px 0 35px 0 !important;
 }
 
 .header-link {
@@ -151,7 +175,7 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 30px);
-  gap: 0.3rem;
+  gap: 1rem;
 }
 
 .summary p {
@@ -162,7 +186,12 @@ main {
 
 /* ==== education ==== */
 
-ol {
+.education {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+}
+
+.education ol {
   border-left: 1px solid #e9e7e1;
   position: relative;
   /* z-index: -100px; */
@@ -173,19 +202,38 @@ ol {
   position: relative;
 }
 
-/* .education-diplome:before {
-  content: "O";
-  color: #e9e7e1;
-  position: absolute;
+.education-diplome {
+  margin-bottom: 20px;
+}
+
+.education-diplome::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
   background-color: white;
-  right: 467px;
-  z-index: 100px;
-} */
+  border-radius: 50%;
+  border: 1px solid #d7d6be;
+  position: absolute;
+  right: 449px;
+  top: 2px;
+}
+
+.education-description li {
+  display: inline-block;
+  vertical-align: top;
+}
 
 .education-description li::before {
   content: "\25AA"; /* Code Unicode pour le symbole carré (◪) */
-  margin-right: 8px; /* Ajouter un espace entre le symbole et le texte */
+  margin-right: 18px; /* Ajouter un espace entre le symbole et le texte */
   color: #d7d6be;
+  position: absolute;
+  left: -12px;
+}
+
+.education-description {
+  padding-left: 20px !important;
 }
 
 /* ==== experiences ==== */
@@ -194,13 +242,35 @@ ol {
   margin: 50px 20px 0 0;
 }
 
+.work-experience li {
+  list-style-type: none;
+}
+
+.work-experience li::before {
+  margin-right: 8px;
+}
+
+.work-experience h3 {
+  margin: 0px;
+}
+
+.work-experience ol {
+  padding: 0;
+}
+
 .experiences__projets {
   list-style-type: none;
+}
+
+.experiences__projets li {
+  margin-left: 6px;
 }
 
 .experiences__projets li::before {
   content: "\25AA"; /* Code Unicode pour le symbole carré (◪) */
   color: #d7d6be;
+  position: absolute;
+  right: 1085px;
 }
 
 /* ==== MORE ==== */
@@ -215,4 +285,27 @@ ol {
 
 .hobbies ul {
   list-style-type: none;
+}
+
+.hobbies li {
+  font-size: 14px !important;
+  line-height: 25px;
+}
+
+/* ==== Softskills ==== */
+
+.softskills ul {
+  padding: 0;
+}
+
+.softskills li {
+  font-size: 14px !important;
+  line-height: 20px;
+  list-style-type: none;
+}
+
+.softskills li::before {
+  content: "\25AA";
+  margin-right: 8px;
+  color: #d7d6be;
 }
