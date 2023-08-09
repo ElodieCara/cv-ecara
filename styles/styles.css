@@ -42,7 +42,7 @@ h1 {
 h2 {
   font-size: 18px;
   text-transform: uppercase;
-  margin: 10px 0 20px 0;
+  margin: 10px 0 10px 0;
   color: grey;
   font-weight: 400; /* Réglez la valeur de la font-weight pour rendre le texte plus fin */
   letter-spacing: 2px; /* Réglez la valeur de letter-spacing pour ajuster l'espacement entre les lettres */
@@ -72,7 +72,6 @@ a {
 }
 
 ul {
-  /* text-align: justify; */
   margin: 0;
   padding: 0 0 8px 15px;
   text-decoration: none;
@@ -110,9 +109,9 @@ article {
 
 aside {
   display: grid;
-  grid-template-rows: auto 1fr; /* Une rangée en haut, le reste en bas */
-  grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
-  gap: 10px; /* Espacement entre les éléments */
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
   height: 300px;
 }
 
@@ -178,6 +177,12 @@ main {
   gap: 1rem;
 }
 
+.container-langages img,
+.container-outils img {
+  padding: 1px;
+  width: 100%;
+}
+
 .summary p {
   border-left: 1px solid #e9e7e1;
   position: relative;
@@ -194,7 +199,6 @@ main {
 .education ol {
   border-left: 1px solid #e9e7e1;
   position: relative;
-  /* z-index: -100px; */
 }
 
 .education-list li {
@@ -226,7 +230,7 @@ main {
 
 .education-description li::before {
   content: "\25AA"; /* Code Unicode pour le symbole carré (◪) */
-  margin-right: 18px; /* Ajouter un espace entre le symbole et le texte */
+  margin-right: 18px;
   color: #d7d6be;
   position: absolute;
   left: -12px;
@@ -239,7 +243,7 @@ main {
 /* ==== experiences ==== */
 
 .work-experience {
-  margin: 50px 20px 0 0;
+  margin: 25px 20px 0 0;
 }
 
 .work-experience li {
@@ -252,14 +256,13 @@ main {
 
 .work-experience h3 {
   margin: 0px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-family: "Times New Roman", sans-serif;
 }
 
-.work-experience ol {
+.work-experience {
   padding: 0;
-}
-
-.experiences__projets {
-  list-style-type: none;
 }
 
 .experiences__projets li {
@@ -269,16 +272,8 @@ main {
 .experiences__projets li::before {
   content: "\25AA"; /* Code Unicode pour le symbole carré (◪) */
   color: #d7d6be;
-  position: absolute;
-  right: 1085px;
-}
 
-/* ==== MORE ==== */
-
-.more {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Deux colonnes de largeur égale */
-  gap: 20px; /* Espacement entre les colonnes */
+  margin-right: 8px;
 }
 
 /* ==== hobbies ==== */
