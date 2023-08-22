@@ -312,3 +312,52 @@ main {
   margin-right: 8px;
   color: #d7d6be;
 }
+
+/* =========== ANNEXE ========== */
+
+.header-annexe {
+  width: 85%;
+  height: 300px;
+}
+
+.annexe-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  border-bottom: 1px solid #d7d6be;
+  border-right: 1px solid #d7d6be;
+  border-bottom-right-radius: 50px;
+  width: auto;
+  height: 100%;
+}
+
+.annexe-link li {
+  text-decoration: none;
+  list-style-type: none;
+  margin-bottom: 12px;
+  margin-left: 10rem;
+}
+
+.logo {
+  position: absolute;
+  right: -115px;
+  z-index: 99;
+}
+
+.logo img {
+  width: 50%;
+  box-shadow: none;
+}
+/*=== Main ===*/
+
+.container-text {
+  padding: 30px;
+}
+
+.text {
+  text-align: justify;
+  text-justify: inter-word;
+  text-indent: 3%;
+}
