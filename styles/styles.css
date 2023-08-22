@@ -147,6 +147,10 @@ header {
 .header-link i {
   margin: 5px;
 }
+
+.header-link a:hover {
+  color: #1a1614;
+}
 /* ==== Main ==== */
 
 main {
@@ -273,8 +277,11 @@ main {
 .experiences__projets li::before {
   content: "\25AA"; /* Code Unicode pour le symbole carré (◪) */
   color: #d7d6be;
-
   margin-right: 8px;
+}
+
+.experiences__projets li:hover {
+  color: #1a1614;
 }
 
 /* ==== hobbies ==== */
