@@ -179,6 +179,7 @@ main {
 
 .container-langages img,
 .container-outils img {
+  border-radius: 50%;
   padding: 1px;
   width: 100%;
 }
