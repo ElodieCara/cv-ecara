@@ -69,6 +69,7 @@ a {
   font-size: 14px !important;
   font-family: "Times New Roman", Times, serif;
   color: grey;
+  list-style: none;
 }
 
 ul {
@@ -97,7 +98,7 @@ img {
 section {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 10px;
+  gap: 45px;
   margin: 10px;
 }
 
@@ -105,12 +106,13 @@ article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 22px;
 }
 
 aside {
   display: grid;
   grid-template-rows: auto 1fr;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
   gap: 10px;
   height: 300px;
 }
@@ -207,6 +209,12 @@ main {
   position: relative;
 }
 
+.education-list {
+  border-left: 1px solid #e9e7e1;
+  position: relative;
+  padding-left: 40px;
+}
+
 .education-list li {
   list-style-type: none;
   position: relative;
@@ -225,8 +233,8 @@ main {
   border-radius: 50%;
   border: 1px solid #d7d6be;
   position: absolute;
-  right: 449px;
-  top: 2px;
+  right: 426px;
+  top: 4px;
 }
 
 .education-description li {
@@ -249,7 +257,8 @@ main {
 /* ==== experiences ==== */
 
 .work-experience {
-  margin: 25px 20px 0 0;
+  margin: 30px 20px 0 0;
+  padding: 0;
 }
 
 .work-experience li {
@@ -267,12 +276,12 @@ main {
   font-family: "Times New Roman", sans-serif;
 }
 
-.work-experience {
-  padding: 0;
+.experiences__projets {
+  line-height: 33px;
 }
 
-.experiences__projets li {
-  margin-left: 6px;
+.experiences__projets p {
+  margin: 0px;
 }
 
 .experiences__projets li::before {
@@ -283,6 +292,14 @@ main {
 
 .experiences__projets li:hover {
   color: #1a1614;
+}
+
+.experiences h3 {
+  margin: 5px 0 0 0;
+}
+
+.experiences p {
+  margin: 0;
 }
 
 /* ==== hobbies ==== */
